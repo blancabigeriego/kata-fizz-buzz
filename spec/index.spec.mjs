@@ -16,12 +16,12 @@ describe("FIZZ, BUZZ KATA", () =>{
         expect(result).toEqual('Fizz');
     });
     it('should return 4 as a string if 4 is passed as an argument', () => {
-        const fizzbuzz = new FizzBuzz()
+        const fizzbuzz = new FizzBuzz();
         const result = fizzbuzz.convertNumber(4);
         expect(result).toEqual('4');
     });
     it('should work with any number and return Fizz for 3 multiples and Buzz for 5 multiples and FizzBuzz for multiples of both', () => {
-
+        const fizzbuzz = new FizzBuzz();
         const resultThree = fizzbuzz.convertNumber(6);
         expect(resultThree).toEqual('Fizz');
 
@@ -31,5 +31,10 @@ describe("FIZZ, BUZZ KATA", () =>{
         const resultFizzBuzz = fizzbuzz.convertNumber(15);
         expect(resultFizzBuzz).toEqual('FizzBuzz');
 
+    });
+    it('should not return anything if argument is not a number', () => {
+        const fizzbuzz = new FizzBuzz();
+        const result = fizzbuzz.convertNumber('no es numero');
+        expect(result).toBe(undefined);
     })
 })
