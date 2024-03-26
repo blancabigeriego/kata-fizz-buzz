@@ -20,4 +20,16 @@ describe("FIZZ, BUZZ KATA", () =>{
         const result = fizzbuzz.convertNumber(4);
         expect(result).toEqual('4');
     });
+    it('should work with any number and return Fizz for 3 multiples and Buzz for 5 multiples and FizzBuzz for multiples of both', () => {
+
+        const resultThree = fizzbuzz.convertNumber(6);
+        expect(resultThree).toEqual('Fizz');
+
+        const resultBuzz = fizzbuzz.convertNumber(20);
+        expect(resultBuzz).toEqual('Buzz');
+
+        const resultFizzBuzz = fizzbuzz.convertNumber(15);
+        expect(resultFizzBuzz).toEqual('FizzBuzz');
+
+    })
 })

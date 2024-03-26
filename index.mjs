@@ -1,9 +1,11 @@
 export class FizzBuzz {
     convertNumber(number) {
-        if(number === 1)
-        return '1';
-        if(number === 2) return '2';
-        if(number % 3 === 0) return 'Fizz';
-        if(number === 4)  return '4';
+        if (typeof number !== 'number' || !Number.isInteger(number)) return;
+    
+        let result = '';
+        if (number % 3 === 0) result += 'Fizz';
+        if (number % 5 === 0) result += 'Buzz';
+    
+        return result || number.toString();
     }
 }
