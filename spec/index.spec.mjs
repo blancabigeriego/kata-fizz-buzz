@@ -14,5 +14,10 @@ describe("FIZZ, BUZZ KATA", () =>{
         const fizzbuzz = new FizzBuzz()
         const result = fizzbuzz.convertNumber(3);
         expect(result).toEqual('Fizz');
-    })
+    });
+    it('should return 4 as a string if 4 is passed as an argument', () => {
+        const fizzbuzz = new FizzBuzz()
+        const result = fizzbuzz.convertNumber(4);
+        expect(result).toEqual('4');
+    });
 })
