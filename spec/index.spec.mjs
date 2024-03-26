@@ -10,4 +10,9 @@ describe("FIZZ, BUZZ KATA", () =>{
         const result = fizzbuzz.convertNumber(2);
         expect(result).toEqual('2');
     });
+    it('should return fizz for a multiple of 3 number', () => {
+        const fizzbuzz = new FizzBuzz()
+        const result = fizzbuzz.convertNumber(3);
+        expect(result).toEqual('Fizz');
+    })
 })
